@@ -6,7 +6,7 @@ class CardImageList extends StatelessWidget {
   Widget build(BuildContext context) {
     // TODO: implement build
     return Container(
-      height: 350.0,
+      height: MediaQuery.of(context).size.height * 0.32,
       child: ListView(
         padding: EdgeInsets.all(25.0),
         scrollDirection: Axis.horizontal,

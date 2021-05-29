@@ -32,8 +32,10 @@ class _PlatziTrips extends State<PlatziTrips> {
     return Scaffold(
       body: widgetsChildren[indexTap],
       bottomNavigationBar: Theme(
-        data: Theme.of(context)
-            .copyWith(canvasColor: Colors.white, primaryColor: Colors.purple),
+        data: Theme.of(context).copyWith(
+          canvasColor: Colors.white,
+          primaryColor: Colors.purple,
+        ),
         child: BottomNavigationBar(
             onTap: onTapTapped,
             currentIndex: indexTap,

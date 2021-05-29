@@ -5,9 +5,9 @@ import 'package:dvida/Place/ui/widgets/card_image_list.dart';
 class HeaderAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return Stack(
-      children: <Widget>[GradientBack("Bienvenido"), CardImageList()],
+      alignment: AlignmentDirectional.bottomStart,
+      children: <Widget>[GradientBack("Últimos casos"), CardImageList()],
     );
   }
 }
