@@ -1,3 +1,5 @@
+import 'package:dvida/widgets/floating_button_cam.dart';
+import 'package:dvida/widgets/floating_button_perfil.dart';
 import 'package:flutter/material.dart';
 import 'package:dvida/widgets/button_purple.dart';
 
@@ -13,23 +15,16 @@ class DescriptionPlace extends StatelessWidget {
   Widget build(BuildContext context) {
     // TODO: implement build
 
-    final bienvenido = Row(
-      children: <Widget>[
-        Container(
-          margin: EdgeInsets.only(
-              top: 40.0,
-              left: MediaQuery.of(context).size.width * 0.05,
-              right: 20.0),
-          child: Text(
-            namePlace,
-            style: Theme.of(context).primaryTextTheme.headline6,
-            textAlign: TextAlign.left,
-          ),
-        ),
-        Row(
-            //children: <Widget>[star, star, star, star, star_half],
-            )
-      ],
+    final bienvenido = Container(
+      margin: EdgeInsets.only(
+          top: 40.0,
+          left: MediaQuery.of(context).size.width * 0.05,
+          right: 20.0),
+      child: Text(
+        namePlace,
+        style: Theme.of(context).primaryTextTheme.headline6,
+        textAlign: TextAlign.left,
+      ),
     );
 
     final nombres = Container(
@@ -66,7 +61,7 @@ class DescriptionPlace extends StatelessWidget {
       ),
     );
 
-    return Column(
+    final composicion_nombre = Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
         bienvenido,
@@ -74,9 +69,9 @@ class DescriptionPlace extends StatelessWidget {
         apellidos,
         tus_casos,
         Center(
-            child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
               ButtonPurple(
                 "Casos registrados",
                 5,
@@ -90,8 +85,18 @@ class DescriptionPlace extends StatelessWidget {
                 Color.fromRGBO(175, 67, 255, 1.0),
                 Icons.zoom_out_map,
                 1,
-              )
-            ]))
+              ),
+            ],
+          ),
+        ),
+      ],
+    );
+
+    return Stack(
+      alignment: Alignment(0.6, -0.8),
+      children: [
+        ButtonPerfil(),
+        composicion_nombre,
       ],
     );
   }

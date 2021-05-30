@@ -19,11 +19,11 @@ class _FloatingActionButtonGreen extends State<FloatingActionButtonGreen> {
   Widget build(BuildContext context) {
     // TODO: implement build
     return FloatingActionButton(
-      backgroundColor: Color.fromRGBO(174, 689, 255, 1.0),
+      backgroundColor: Color.fromRGBO(175, 67, 255, 1.0),
       mini: true,
       tooltip: "Fav",
       onPressed: onPressedFav,
-      child: Icon(Icons.favorite_border),
+      child: Icon(Icons.mood_bad),
     );
   }
 }

@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class StatisticDZero extends StatelessWidget {
+class IACam extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
     return Container(
-      color: Theme.of(context).primaryColor,
+      color: Theme.of(context).canvasColor,
     );
   }
 }

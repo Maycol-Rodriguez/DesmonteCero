@@ -13,8 +13,6 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         title: 'DZero',
         theme: myTheme,
-        home: DZeroApp()
-        //home: PlatziTripsCupertino(),
-        );
+        home: DZeroApp());
   }
 }

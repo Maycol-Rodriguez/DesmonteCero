@@ -20,7 +20,6 @@ class _FloatingIcon extends State<FloatingIcon> {
 
   @override
   Widget build(BuildContext context) {
-    //const color_unico = Color.fromRGBO(175, 67, 255, 1.0);
     // TODO: implement build
     return FloatingActionButton(
       backgroundColor: widget.color_unico,
