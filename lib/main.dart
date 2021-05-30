@@ -1,9 +1,6 @@
-import 'dart:async';
-
+import 'package:dvida/dzero_app.dart';
 import 'package:flutter/material.dart';
-import 'platzi_trips.dart';
 import '01theme/officialTheme.dart';
-import 'platzi_trips_cupertino.dart';
 
 void main() => runApp(MyApp());
 
@@ -16,7 +13,7 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         title: 'DZero',
         theme: myTheme,
-        home: PlatziTrips()
+        home: DZeroApp()
         //home: PlatziTripsCupertino(),
         );
   }

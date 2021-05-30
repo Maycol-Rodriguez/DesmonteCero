@@ -31,7 +31,7 @@ class _PlatziTrips extends State<PlatziTrips> {
 
     return Scaffold(
       body: widgetsChildren[indexTap],
-      bottomNavigationBar: Theme(
+      /*bottomNavigationBar: Theme(
         data: Theme.of(context).copyWith(
           canvasColor: Colors.white,
           primaryColor: Colors.purple,
@@ -46,7 +46,7 @@ class _PlatziTrips extends State<PlatziTrips> {
               BottomNavigationBarItem(
                   icon: Icon(Icons.person), title: Text("")),
             ]),
-      ),
+      ),*/
     );
   }
 }

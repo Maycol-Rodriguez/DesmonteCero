@@ -10,12 +10,12 @@ class HomeTrips extends StatelessWidget {
   Widget build(BuildContext context) {
     // TODO: implement build
     return Stack(
-      alignment: AlignmentDirectional.bottomStart,
+      alignment: Alignment(1, 1),
       children: <Widget>[
         ListView(
           children: <Widget>[
             DescriptionPlace("Bienvenido", 4, nombre, apellido),
-            ReviewList()
+            //ReviewList()
           ],
         ),
         HeaderAppBar()
