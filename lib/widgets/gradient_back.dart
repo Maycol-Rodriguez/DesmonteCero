@@ -10,7 +10,7 @@ class GradientBack extends StatelessWidget {
     // TODO: implement build
     return Container(
       transformAlignment: AlignmentDirectional.bottomEnd,
-      height: MediaQuery.of(context).size.height * 0.28,
+      height: MediaQuery.of(context).size.height * 0.32,
       decoration: BoxDecoration(
           borderRadius: BorderRadius.vertical(top: Radius.circular(40)),
           gradient: LinearGradient(

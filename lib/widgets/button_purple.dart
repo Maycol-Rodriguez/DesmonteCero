@@ -1,63 +1,87 @@
+import 'package:dvida/Place/ui/screens/search_trips.dart';
+import 'package:dvida/Place/ui/screens/statistics.dart';
+import 'package:dvida/widgets/floating_icon.dart';
 import 'package:flutter/material.dart';
 
 class ButtonPurple extends StatelessWidget {
   String buttonText;
   int buttonText_number;
+  final Color color_unico;
+  final IconData icono;
+  int next_page;
 
-  ButtonPurple(this.buttonText, this.buttonText_number);
+  final List<Widget> widgetsChildren = [
+    StatisticDZero(),
+    SearchTrips(),
+  ];
+
+  ButtonPurple(this.buttonText, this.buttonText_number, this.color_unico,
+      this.icono, this.next_page);
 
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
-    return InkWell(
-      onTap: () {
-        Scaffold.of(context).showSnackBar(SnackBar(
-          content: Text("Navegando"),
-        ));
+
+    final boton = ElevatedButton(
+      onPressed: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => widgetsChildren[next_page]),
+        );
       },
       child: Container(
-        alignment: Alignment.topLeft,
-        margin: EdgeInsets.only(top: 10.0, left: 20.0, right: 2.0),
-        height: 230.0,
-        width: MediaQuery.of(context).size.width * 0.43,
+        //alignment: Alignment.topLeft,
+        margin: EdgeInsets.only(top: 20.0, bottom: 0.0, left: 0.0, right: 0),
+        height: MediaQuery.of(context).size.height * 0.30, //230.0,
+        width: MediaQuery.of(context).size.width * 0.40,
         decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(30.0),
-            gradient: LinearGradient(
-                colors: [
-                  Color.fromRGBO(62, 74, 134, 0.53),
-                  Color.fromRGBO(62, 74, 134, 0.53)
-                ],
-                begin: FractionalOffset(0.2, 0.0),
-                end: FractionalOffset(1.0, 0.6),
-                stops: [0.0, 0.6],
-                tileMode: TileMode.clamp)),
+          borderRadius: BorderRadius.circular(30.0),
+          gradient: LinearGradient(
+            colors: [
+              Color.fromRGBO(62, 74, 134, 0.53),
+              Color.fromRGBO(62, 74, 134, 0.53)
+            ],
+          ),
+        ),
+
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.end,
           children: <Widget>[
-            Icon(
-              Icons.app_registration,
-              color: Color(0xFFf2C611),
-            ),
             Container(
-              margin: new EdgeInsets.only(top: 60.0, left: 20.0, right: 0.0),
-              child: new Text(
-                'Tus casos',
-                style: Theme.of(context).primaryTextTheme.headline6,
-                textAlign: TextAlign.left,
+              margin: new EdgeInsets.only(
+                  top: 60.0,
+                  left: MediaQuery.of(context).size.width * 0.05,
+                  bottom: MediaQuery.of(context).size.width * 0.05,
+                  right: 0.0),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  Text(
+                    buttonText_number.toString(),
+                    style: Theme.of(context).primaryTextTheme.headline2,
+                    textAlign: TextAlign.left,
+                  ),
+                  Text(
+                    buttonText,
+                    style: Theme.of(context).primaryTextTheme.subtitle1,
+                    textAlign: TextAlign.left,
+                  ),
+                ],
               ),
-            ),
-            Text(
-              buttonText_number.toString(),
-              style: Theme.of(context).primaryTextTheme.headline1,
-              textAlign: TextAlign.left,
-            ),
-            Text(
-              buttonText,
-              style: Theme.of(context).primaryTextTheme.headline6,
-              textAlign: TextAlign.left,
             ),
           ],
         ),
       ),
+    );
+
+    return Stack(
+      alignment: Alignment(0.6, -0.7),
+      children: <Widget>[
+        boton,
+        FloatingIcon(color_unico, icono), //replay_circle_filled_rounded
+      ],
     );
   }
 }

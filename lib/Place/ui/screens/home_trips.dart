@@ -1,3 +1,5 @@
+import 'package:dvida/widgets/floating_button_cam.dart';
+
 import 'package:flutter/material.dart';
 import 'package:dvida/Place/ui/widgets/description_place.dart';
 import 'package:dvida/Place/ui/screens/header_appbar.dart';
@@ -9,16 +11,25 @@ class HomeTrips extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
-    return Stack(
-      alignment: AlignmentDirectional.bottomStart,
+
+    final cuerpo_princial = Stack(
+      alignment: Alignment(1, 1),
       children: <Widget>[
         ListView(
           children: <Widget>[
             DescriptionPlace("Bienvenido", 4, nombre, apellido),
-            ReviewList()
+            //ReviewList()
           ],
         ),
-        HeaderAppBar()
+        HeaderAppBar(),
+      ],
+    );
+
+    return Stack(
+      alignment: Alignment(.8, 0.4),
+      children: [
+        cuerpo_princial,
+        ButtonCam(),
       ],
     );
   }
