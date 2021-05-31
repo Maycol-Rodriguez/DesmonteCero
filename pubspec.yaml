@@ -29,11 +29,17 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
   charts_flutter: ^0.8.1
+  image_picker: ^0.6.7+9
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  flutter_launcher_icons: "^0.8.0"
 
+flutter_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/icon/icon.png"
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
 
@@ -53,6 +59,16 @@ flutter:
     - assets/01image/desmontes/desmonte04.jpg
     - assets/01image/desmontes/desmonte05.jpg
     - assets/01image/foto.jpg
+    - assets/01image/app_foto.png
+    - assets/01image/app_foto_direccion.png
+    - assets/01image/app_ubicación_gps.png
+    - assets/01image/app_resultado.png
+    - assets/01image/app_mapa_calor.png
+    - assets/01image/app_perfil.png
+    - assets/01image/jordan.jpg
+    - assets/01image/logo3.png
+    - assets/01image/app_bandeja_mensaje.png
+    
 
     - assets/img/people.jpg
     - assets/img/ann.jpg

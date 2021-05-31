@@ -1,7 +1,7 @@
-import 'package:dvida/Place/ui/screens/perfil_detalle.dart';
+import 'package:dvida/Place/ui/screens/ia_cam_detalle_puntaje.dart';
 import 'package:flutter/material.dart';
 
-class PerfilScreen extends StatelessWidget {
+class DetalleCam extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
@@ -14,7 +14,7 @@ class PerfilScreen extends StatelessWidget {
           Navigator.push(
             context,
             MaterialPageRoute(
-              builder: (context) => DetallePerfil(),
+              builder: (context) => DetalleCamPuntaje(),
             ),
           );
         },
@@ -34,17 +34,11 @@ class PerfilScreen extends StatelessWidget {
             ),
           ),
 
-          child: Image(image: AssetImage('assets/01image/app_perfil.png')),
+          child:
+              Image(image: AssetImage('assets/01image/app_ubicación_gps.png')),
         ),
         //Icon(Icons.add_a_photo),
       ),
     );
   }
-} /*
-    
-    Image(
-      image: AssetImage('assets/01image/app_perfil.png'),
-    );
-  }
 }
-*/

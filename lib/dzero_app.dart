@@ -15,8 +15,8 @@ class _DZeroApp extends State<DZeroApp> {
   int indexTap = 1;
   final List<Widget> widgetsChildren = [
     HomeTrips(),
-    SearchTrips(),
-    ProfileTrips()
+    //SearchTrips(),
+    //ProfileTrips()
   ];
 
   void onTapTapped(int index) {

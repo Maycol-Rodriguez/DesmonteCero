@@ -1,7 +1,8 @@
-import 'package:dvida/Place/ui/screens/perfil_detalle.dart';
+import 'package:dvida/Place/ui/screens/home_trips.dart';
+import 'package:dvida/dzero_app.dart';
 import 'package:flutter/material.dart';
 
-class PerfilScreen extends StatelessWidget {
+class DetallePerfil extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
@@ -14,7 +15,7 @@ class PerfilScreen extends StatelessWidget {
           Navigator.push(
             context,
             MaterialPageRoute(
-              builder: (context) => DetallePerfil(),
+              builder: (context) => DZeroApp(),
             ),
           );
         },
@@ -34,17 +35,11 @@ class PerfilScreen extends StatelessWidget {
             ),
           ),
 
-          child: Image(image: AssetImage('assets/01image/app_perfil.png')),
+          child: Image(
+              image: AssetImage('assets/01image/app_bandeja_mensaje.png')),
         ),
         //Icon(Icons.add_a_photo),
       ),
     );
   }
-} /*
-    
-    Image(
-      image: AssetImage('assets/01image/app_perfil.png'),
-    );
-  }
 }
-*/

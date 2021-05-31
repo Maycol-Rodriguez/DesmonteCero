@@ -12,7 +12,7 @@ class ButtonPurple extends StatelessWidget {
 
   final List<Widget> widgetsChildren = [
     StatisticDZero(),
-    SearchTrips(),
+    mapas_(),
   ];
 
   ButtonPurple(this.buttonText, this.buttonText_number, this.color_unico,

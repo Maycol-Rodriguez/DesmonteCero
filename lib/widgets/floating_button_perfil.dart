@@ -21,14 +21,14 @@ class ButtonPerfil extends StatelessWidget {
       child: Container(
         //alignment: Alignment.topLeft,
         margin: EdgeInsets.only(top: 0.0, bottom: 0.0, left: 0.0, right: 0),
-        height: 10, //230.0,
-        width: 10,
+        height: 30, //230.0,
+        width: 30,
         constraints: BoxConstraints.expand(),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(50.0),
           image: DecorationImage(
             fit: BoxFit.cover,
-            image: AssetImage('assets/01image/foto.jpg'),
+            image: AssetImage('assets/01image/jordan.jpg'),
           ),
         ),
       ),
